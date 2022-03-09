@@ -1,0 +1,18 @@
+#@data/values
+
+#@overlay/match-child-defaults missing_ok=True
+---
+tap:
+  version: "1.1.0-build.5"
+  namespace: tap-install
+  catalogs: []
+
+  registry:
+    host: tapdemoregistry.azurecr.io
+    repositories:
+      buildService: repo/build-service
+      ootbSupplyChain: repo/supply-chain
+
+  domains:
+    main: tap.tanzu4u.net
+    tapGui: tap-gui-build.tap.tanzu4u.net
