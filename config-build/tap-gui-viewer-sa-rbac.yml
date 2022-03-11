@@ -52,3 +52,38 @@ rules:
       - routes
       - services
     verbs: ['get', 'watch', 'list']
+  - apiGroups: ['carto.run']
+    resources:
+      - clusterconfigtemplates
+      - clusterdeliveries
+      - clusterdeploymenttemplates
+      - clusterimagetemplates
+      - clusterruntemplates
+      - clustersourcetemplates
+      - clustersupplychains
+      - clustertemplates
+      - deliverables
+      - runnables
+      - workloads
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ 'source.toolkit.fluxcd.io' ]
+    resources: [ 'gitrepositories' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ conventions.apps.tanzu.vmware.com ]
+    resources: [ 'podintents' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ conventions.apps.tanzu.vmware.com ]
+    resources: [ 'podintents' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ kpack.io ]
+    resources: [ 'images', 'builds' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ scanning.apps.tanzu.vmware.com ]
+    resources: [ 'sourcescans', 'imagescans' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ tekton.dev ]
+    resources: [ 'pipelineruns', 'taskruns' ]
+    verbs: [ 'get', 'watch', 'list' ]
+  - apiGroups: [ kappctrl.k14s.io ]
+    resources: [ 'apps' ]
+    verbs: [ 'get', 'watch', 'list' ]
