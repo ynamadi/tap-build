@@ -10,7 +10,7 @@ spec:
   serviceAccountName: tap-install-gitops-sa
   fetch:
   - git:
-      url: https://github.com/ynamadi/tap-view
+      url: https://github.com/ynamadi/tap-build
       ref: origin/main
       secretRef:
         name: tap-install-gitops-github
