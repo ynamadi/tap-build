@@ -15,4 +15,4 @@ tap:
 
   domains:
     main: tap.y-compiles.com
-    tapGui: tap-gui-build.tap.y-compiles
+    tapGui: tap-gui-build.tap.y-compiles.com
