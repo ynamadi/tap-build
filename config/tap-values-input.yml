@@ -8,7 +8,7 @@ tap:
   catalogs: []
 
   registry:
-    host: reg.y-compiles.com
+    host: tapbuild.azurecr.io
     repositories:
       buildService: repo/build-service
       ootbSupplyChain: repo/supply-chain
