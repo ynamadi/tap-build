@@ -93,6 +93,15 @@ cnrs:
   default_tls_secret: tanzu-system-ingress/tls
   domain_template: "{{.Name}}-{{.Namespace}}.{{.Domain}}"
 
+scanning:
+  metadataStore:
+    url: "https://metadata-store.y-compiles.com"
+    caSecret:
+      name: store-ca-cert
+      importFromNamespace: metadata-store
+    authSecret:
+      name: store-auth-token
+      importFromNamespace: metadata-store
 #@ end
 ---
 apiVersion: v1
