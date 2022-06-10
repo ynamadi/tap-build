@@ -8,7 +8,6 @@ tap:
   domains:
     learningCenter: learningcenter.y-compiles.com
     knative: apps.y-compiles.com
-    metadataStore: metadata-store.y-compiles.com
     appliveview:
       host: appliveview.y-compiles.com
       port: 443
