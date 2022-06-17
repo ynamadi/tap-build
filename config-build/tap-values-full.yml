@@ -88,6 +88,16 @@ contour:
     service:
       type: LoadBalancer
 
+scanning:
+  metadataStore:
+    url: #@ data.values.tap.domains.metadataStore
+    caSecret:
+        name: store-ca-cert
+        importFromNamespace: metadata-store-secrets
+    authSecret:
+        name: store-auth-token
+        importFromNamespace: metadata-store-secrets
+
 cnrs:
   domain_name: #@ data.values.tap.domains.knative
   default_tls_secret: tanzu-system-ingress/tls
