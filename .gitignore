@@ -3,3 +3,6 @@ config-custom
 tap-install-secrets.yml
 tap-install-config.yml
 /.idea/
+/tanzu-cluster-essentials/
+/cluster-essentials.sh
+/eks-cluster-setup.sh
