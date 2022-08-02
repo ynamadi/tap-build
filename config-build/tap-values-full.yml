@@ -56,7 +56,7 @@ grype:
 
 scanning:
   metadataStore:
-    url: ""
+    url: "https://metadata-store.tanzu.y-compiles.com"
     caSecret:
         name: store-ca-cert
         importFromNamespace: metadata-store-secrets
