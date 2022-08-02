@@ -24,6 +24,7 @@ ootb_supply_chain_testing_scanning:
     server_address: https://github.com/
     ssh_secret: git-ssh
     commit_strategy: pull_request
+    branch: "staging"
     pull_request:
       server_kind: github
       pull_request_title: "Approval for Production deployment"
@@ -34,13 +35,10 @@ ootb_supply_chain_testing_scanning:
       template: private-image-scan-template
       policy: scan-policy
 
-metadata_store:
-  ns_for_export_app_cert: "*"
-  ingress_enabled: "true"
-  ingress_domain: #@ data.values.tap.domains.main
-  ingressSecret:
-    secretName: tls
- 
+scanning:
+  metadataStore:
+    url: ""
+
 grype:
   namespace: #@ data.values.tap.devNamespace
   targetImagePullSecret: "registry-credentials"
@@ -52,11 +50,6 @@ grype:
     authSecret:
       name: store-auth-token
       importFromNamespace: metadata-store-secrets
-
-
-scanning:
-  metadataStore:
-    url: ""
 #@ end
 ---
 apiVersion: v1

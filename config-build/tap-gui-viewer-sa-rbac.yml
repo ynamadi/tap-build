@@ -70,11 +70,7 @@ rules:
   resources:
   - gitrepositories
   verbs: ['get', 'watch', 'list']
-- apiGroups: ['source.apps.tanzu.vmware.com']
-  resources:
-  - imagerepositories
-  verbs: ['get', 'watch', 'list']
-- apiGroups: ['conventions.carto.run']
+- apiGroups: ['conventions.apps.tanzu.vmware.com']
   resources:
   - podintents
   verbs: ['get', 'watch', 'list']
@@ -87,7 +83,6 @@ rules:
   resources:
   - sourcescans
   - imagescans
-  - scanpolicies
   verbs: ['get', 'watch', 'list']
 - apiGroups: ['tekton.dev']
   resources:
