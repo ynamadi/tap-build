@@ -15,6 +15,7 @@ buildservice:
   enable_automatic_dependency_updates: true
 
 supply_chain: testing_scanning
+
 ootb_supply_chain_testing_scanning:
   registry:
     server: #@ data.values.tap.registry.host
@@ -48,7 +49,7 @@ grype:
 
 scanning:
   metadataStore:
-    url: ""
+    url: "https://metadata-store.tanzu.y-compiles.com"
     caSecret:
         name: store-ca-cert
         importFromNamespace: metadata-store-secrets
