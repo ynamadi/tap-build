@@ -48,7 +48,7 @@ grype:
 
 scanning:
   metadataStore:
-    url: #@ data.values.tap.domains.metadataStore
+    url: ""
     caSecret:
         name: store-ca-cert
         importFromNamespace: metadata-store-secrets
