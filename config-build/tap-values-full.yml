@@ -46,10 +46,17 @@ grype:
   targetImagePullSecret: "registry-credentials"
   metadataStore:
     url: "https://metadata-store.tanzu.y-compiles.com"
+    caSecret:
+      name: store-ca-cert
+      importFromNamespace: metadata-store-secrets
+    authSecret:
+      name: store-auth-token
+      importFromNamespace: metadata-store-secrets
+
 
 scanning:
   metadataStore:
-    url: "https://metadata-store.tanzu.y-compiles.com"
+    url: ""
     caSecret:
         name: store-ca-cert
         importFromNamespace: metadata-store-secrets
