@@ -13,3 +13,6 @@ tap:
       port: 443
 
 domain: y-compiles.com
+tls:
+  secretName: tls
+  namespace: tanzu-system-ingress

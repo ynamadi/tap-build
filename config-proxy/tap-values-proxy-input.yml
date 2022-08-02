@@ -10,3 +10,6 @@ tap:
     knative: apps.y-compiles.com
 
 domain: y-compiles.com
+tls:
+  secretName: tls
+  namespace: tanzu-system-ingress

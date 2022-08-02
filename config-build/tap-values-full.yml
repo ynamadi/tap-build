@@ -55,7 +55,6 @@ scanning:
     authSecret:
         name: store-auth-token
         importFromNamespace: metadata-store-secrets
-
 #@ end
 ---
 apiVersion: v1
