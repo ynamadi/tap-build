@@ -31,8 +31,8 @@ ootb_supply_chain_testing_scanning:
       commit_branch: ""
   scanning:
     image:
-      template: snyk-private-image-scan-template
-      policy: snyk-scan-policy
+      template: private-image-scan-template
+      policy: scan-policy
 
 metadata_store:
   ns_for_export_app_cert: "*"
