@@ -2,6 +2,8 @@
 config-custom
 tap-install-secrets.yml
 tap-install-config.yml
+/post-install/git-secret.yaml
+/post-install/maven-secret.yaml
 /.idea/
 /tanzu-cluster-essentials/
 /cluster-essentials.sh
