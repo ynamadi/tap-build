@@ -8,6 +8,7 @@ tap:
   domains:
     learningCenter: learningcenter.tap.mc.tanzu.projectscions.com
     knative: apps.tap.mc.tanzu.projectscions.com
+    metadataStore: metadata-store.tap.mc.tanzu.projectscions.com
     appliveview:
       host: appliveview.tap.mc.tanzu.projectscions.com
       port: 443
