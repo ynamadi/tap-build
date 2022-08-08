@@ -49,7 +49,7 @@ grype:
   namespace: #@ data.values.tap.devNamespace
   targetImagePullSecret: "registry-credentials"
   metadataStore:
-    url: #@ "https://{}".format(data.values.tap.domains.metadatastore)
+    url: "https://metadata-store.tap.mc.tanzu.projectscions.com"
     caSecret:
       name: store-ca-cert
       importFromNamespace: metadata-store-secrets
