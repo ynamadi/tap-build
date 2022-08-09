@@ -28,7 +28,7 @@ ootb_supply_chain_testing_scanning:
       secret_name: maven-secret
   gitops:
     server_address: https://github.com/
-    ssh_secret: git-ssh
+    ssh_secret: git-ssh-yn
     commit_strategy: pull_request
     pull_request:
       server_kind: github

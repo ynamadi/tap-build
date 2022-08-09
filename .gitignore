@@ -1,6 +1,7 @@
 .DS_Store
 config-custom
 notes.md
+deliverable.yaml
 tap-install-secrets.yml
 tap-install-config.yml
 /post-install/git-secret.yaml
