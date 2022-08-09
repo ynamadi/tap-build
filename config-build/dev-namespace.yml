@@ -68,7 +68,6 @@ metadata:
 secrets:
   - name: registry-credentials
   - name: git-ssh
-  - name: git-ssh-yn
 imagePullSecrets:
   - name: registry-credentials
   - name: tap-registry
