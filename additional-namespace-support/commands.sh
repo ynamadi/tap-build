@@ -18,6 +18,7 @@ metadata:
   name: default
 secrets:
   - name: registry-credentials
+  - name: git-ssh
 imagePullSecrets:
   - name: registry-credentials
   - name: tap-registry
