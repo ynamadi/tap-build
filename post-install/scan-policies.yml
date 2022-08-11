@@ -6,6 +6,8 @@ kind: ScanPolicy
 metadata:
   name: scan-policy
   namespace: #@ data.values.tap.devNamespace
+  labels:
+    'app.kubernetes.io/part-of': 'component-a'
 spec:
   regoFile: |
     package main
@@ -48,6 +50,8 @@ kind: ScanPolicy
 metadata:
   name: snyk-scan-policy
   namespace: #@ data.values.tap.devNamespace
+  labels:
+    'app.kubernetes.io/part-of': 'component-a'
 spec:
   regoFile: |
     package main
