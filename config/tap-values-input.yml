@@ -15,4 +15,4 @@ tap:
 
   domains:
     main: tanzu.y-compiles.com
-    tapGui: tap-gui.tanzu.y-compiles.com
+    tapGui: tap-gui.tap.tanzu.y-compiles.com
