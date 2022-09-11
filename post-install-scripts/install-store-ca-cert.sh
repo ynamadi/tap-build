@@ -1,5 +1,6 @@
+#! /bin/bash
 VIEW_CLUSTER="tap-view"
-BUILD_CLUSTER="build-cluster"
+BUILD_CLUSTER="tap-build"
 
 #Set context to view cluster
 kubectx $VIEW_CLUSTER
