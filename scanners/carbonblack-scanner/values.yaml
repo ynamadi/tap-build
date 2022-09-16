@@ -1,0 +1,13 @@
+namespace: tap-dev
+targetImagePullSecret: "registry-credentials"
+carbonBlack:
+  configSecret:
+    name: carbonblack-token-secret
+metadataStore:
+  url: https://metadata-store.tap.tanzu.y-compiles.com
+  caSecret:
+    name: store-ca-cert
+    importFromNamespace: "" #! since both carbonblack and grype both enable store, one must leave importFromNamespace blank
+  authSecret:
+    name: store-auth-token
+    importFromNamespace: "" #! since both carbonblack and grype both enable store, one must leave importFromNamespace blank
