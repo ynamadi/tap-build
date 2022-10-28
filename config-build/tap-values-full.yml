@@ -24,7 +24,7 @@ ootb_supply_chain_testing_scanning:
     server_address: https://github.com/
     ssh_secret: git-ssh
     commit_strategy: pull_request
-    branch: "staging"
+    branch: "main"
     pull_request:
       server_kind: github
       pull_request_title: "Approval for Production deployment"
