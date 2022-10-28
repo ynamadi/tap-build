@@ -8,8 +8,12 @@ metadata:
     apps.tanzu.vmware.com/language: npm
 spec:
   params:
+    - name: testing_pipeline_matching_labels
+      value:
+        apps.tanzu.vmware.com/pipeline: test
+        apps.tanzu.vmware.com/language: npm
     - name: source-url
-    - name: source-revision                   
+    - name: source-revision
   tasks:
     - name: test
       params:
