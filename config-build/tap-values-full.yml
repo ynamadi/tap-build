@@ -25,6 +25,9 @@ ootb_supply_chain_testing_scanning:
     ssh_secret: git-ssh
     commit_strategy: pull_request
     branch: "main"
+    username: supplychain
+    email: supplychain
+    commit_message: supplychain@cluster.local
     pull_request:
       server_kind: github
       pull_request_title: "Approval for Production deployment"
