@@ -3,6 +3,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: npm-test-pipeline
+  namespace: #@ data.values.tap.devNamespace
   labels:
     apps.tanzu.vmware.com/pipeline: test
     apps.tanzu.vmware.com/language: npm
