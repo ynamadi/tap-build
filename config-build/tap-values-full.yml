@@ -32,8 +32,8 @@ ootb_supply_chain_testing_scanning:
       commit_branch: ""
   scanning:
     source:
-      template: snyk-private-image-scan-template
-      policy: snyk-scan-policy
+      template: blob-source-scan-template
+      policy: scan-policy
     image:
       template: snyk-private-image-scan-template
       policy: snyk-scan-policy
