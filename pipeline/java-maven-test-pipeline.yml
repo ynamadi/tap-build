@@ -5,13 +5,9 @@ metadata:
   name: java-maven-test-pipeline
   labels:
     apps.tanzu.vmware.com/pipeline: test
-    apps.tanzu.vmware.com/language: java-maven
+    apps.tanzu.vmware.com/language: java
 spec:
   params:
-    - name: testing_pipeline_matching_labels
-      value:
-        apps.tanzu.vmware.com/pipeline: test
-        apps.tanzu.vmware.com/language: java-gradle
     - name: source-url
     - name: source-revision
   tasks:
