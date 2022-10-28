@@ -4,12 +4,12 @@ kind: Pipeline
 metadata:
   name: java-gradle-test-pipeline
   labels:
-    apps.tanzu.vmware.com/pipeline: test      # (!) required
+    apps.tanzu.vmware.com/pipeline: test
     apps.tanzu.vmware.com/language: java-gradle
 spec:
   params:
-    - name: source-url                        # (!) required
-    - name: source-revision                   # (!) required
+    - name: source-url
+    - name: source-revision
   tasks:
     - name: test
       params:
