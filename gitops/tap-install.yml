@@ -19,6 +19,8 @@ spec:
       paths:
       - config
       - config-build
+      - pipeline
+      - scan-policies
       valuesFrom:
       - configMapRef:
           name: tap-install-gitops
