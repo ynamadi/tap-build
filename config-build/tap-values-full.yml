@@ -47,7 +47,6 @@ scanning:
     url: ""
 
 grype:
-  namespace: #@ data.values.tap.devNamespace
   targetImagePullSecret: "registry-credentials"
   metadataStore:
     url:  #@ "https://{}".format(data.values.tap.domains.metadataStore)
