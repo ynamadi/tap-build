@@ -35,6 +35,9 @@ ootb_supply_chain_testing_scanning:
       pull_request_body: "Please review the configuration and approve the deployment to production"
       commit_branch: ""
   scanning:
+    source:
+      policy: scan-policy
+      template: blob-source-scan-template
     image:
       template: snyk-private-image-scan-template
       policy: snyk-scan-policy
