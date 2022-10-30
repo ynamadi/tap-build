@@ -2,30 +2,37 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: java-maven-test-pipeline
-  namespace: #@ data.values.tap.devNamespace
   labels:
     apps.tanzu.vmware.com/pipeline: test
     apps.tanzu.vmware.com/language: java-maven
+  name: java-maven-test-pipeline
+  namespace: #@ data.values.tap.devNamespace
 spec:
   params:
-    - name: source-url
-    - name: source-revision
+  - name: source-url
+    type: string
+  - name: source-revision
+    type: string
   tasks:
-    - name: test
+  - name: java-maven-test
+    params:
+    - name: source-url
+      value: $(params.source-url)
+    - name: source-revision
+      value: $(params.source-revision)
+    taskSpec:
+      metadata: {}
       params:
-        - name: source-url
-          value: $(params.source-url)
-        - name: source-revision
-          value: $(params.source-revision)
-      taskSpec:
-        params:
-          - name: source-url
-          - name: source-revision
-        steps:
-          - name: test
-            image: gradle
-            script: |-
-              cd `mktemp -d`
-              wget -qO- $(params.source-url) | tar xvz -m
-              ./mvnw test
+      - name: source-url
+        type: string
+      - name: source-revision
+        type: string
+      spec: null
+      steps:
+      - image: gradle
+        name: test
+        resources: {}
+        script: |-
+          cd `mktemp -d`
+          wget -qO- $(params.source-url) | tar xvz -m
+          ./mvnw test
