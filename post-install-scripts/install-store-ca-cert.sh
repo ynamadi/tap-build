@@ -29,7 +29,8 @@ data:
   ca.crt: $CA_CERT
 EOF
 
-kubectl create secret generic store-auth-token --from-literal=auth_token="$AUTH_TOKEN" -n metadata-store-secrets
+kubectl create secret generic store-auth-token \
+  --from-literal=auth_token=$AUTH_TOKEN -n metadata-store-secrets
 
 cat <<EOF | kubectl apply -f -
 ---
@@ -39,7 +40,7 @@ metadata:
   name: store-ca-cert
   namespace: metadata-store-secrets
 spec:
-  toNamespaces: [tap-dev]
+  toNamespaces: [tap-dev, scan-link-system]
 ---
 apiVersion: secretgen.carvel.dev/v1alpha1
 kind: SecretExport
@@ -47,5 +48,5 @@ metadata:
   name: store-auth-token
   namespace: metadata-store-secrets
 spec:
-  toNamespaces: [tap-dev]
+  toNamespaces: [tap-dev, scan-link-system]
 EOF

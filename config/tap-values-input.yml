@@ -3,7 +3,7 @@
 #@overlay/match-child-defaults missing_ok=True
 ---
 tap:
-  version: "1.3.0"
+  version: "1.4.0"
   namespace: tap-install
   catalogs: []
 
@@ -14,5 +14,5 @@ tap:
       ootbSupplyChain: repo/supply-chain
 
   domains:
-    main: tanzu.y-compiles.com
+    main: tap.tanzu.y-compiles.com
     tapGui: tap-gui.tap.tanzu.y-compiles.com
