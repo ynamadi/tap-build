@@ -3,13 +3,14 @@
 #@overlay/match-child-defaults missing_ok=True
 ---
 tap:
-  version: "1.4.0"
+  version: "1.4.1"
   namespace: tap-install
   catalogs: []
 
   registry:
     host: tapbuild.azurecr.io
     repositories:
+      repoName: tanzu-app-platform
       buildService: repo/build-service
       ootbSupplyChain: repo/supply-chain
 
