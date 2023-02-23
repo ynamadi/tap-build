@@ -1,5 +1,5 @@
 #! /bin/bash
-VIEW_CLUSTER="tap-view"
+VIEW_CLUSTER="tap-gui"
 BUILD_CLUSTER="tap-build"
 
 #Set context to view cluster
@@ -31,22 +31,3 @@ EOF
 
 kubectl create secret generic store-auth-token \
   --from-literal=auth_token=$AUTH_TOKEN -n metadata-store-secrets
-
-cat <<EOF | kubectl apply -f -
----
-apiVersion: secretgen.carvel.dev/v1alpha1
-kind: SecretExport
-metadata:
-  name: store-ca-cert
-  namespace: metadata-store-secrets
-spec:
-  toNamespaces: [tap-dev, scan-link-system]
----
-apiVersion: secretgen.carvel.dev/v1alpha1
-kind: SecretExport
-metadata:
-  name: store-auth-token
-  namespace: metadata-store-secrets
-spec:
-  toNamespaces: [tap-dev, scan-link-system]
-EOF
