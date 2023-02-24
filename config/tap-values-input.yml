@@ -16,4 +16,3 @@ tap:
 
   domains:
     main: tap.tanzu.y-compiles.com
-    tapGui: tap-gui.tap.tanzu.y-compiles.com

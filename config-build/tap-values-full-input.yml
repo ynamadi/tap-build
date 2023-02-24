@@ -7,8 +7,6 @@ tap:
 
   domains:
     metadataStore: metadata-store.tap.tanzu.y-compiles.com
-
-domain: tap.tanzu.y-compiles.com
 tls:
   secretName: tls
   namespace: tanzu-system-ingress

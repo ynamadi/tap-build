@@ -1,4 +1,6 @@
 #! /bin/bash
+
+#You will need to extract the Cluster URL and the Cluster Token to connect the build cluster to TAP GUI
 CLUSTER_URL=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
 
 kubectl apply -f - <<EOF
@@ -17,6 +19,7 @@ CLUSTER_TOKEN=$(kubectl -n tap-gui get secret tap-gui-viewer -o=json \
 | base64 --decode)
 
 CLUSTER_CA_CERTIFICATES=$(kubectl config view --raw -o jsonpath='{.clusters[?(@.name=="CLUSTER-NAME")].cluster.certificate-authority-data}')
+
 
 echo CLUSTER_CA_CERTIFICATES: "$CLUSTER_CA_CERTIFICATES"
 echo CLUSTER_URL: "$CLUSTER_URL"

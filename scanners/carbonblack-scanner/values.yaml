@@ -6,6 +6,8 @@ carbonBlack:
 metadataStore:
   url: "https://metadata-store.tap.tanzu.y-compiles.com"
   caSecret:
+    name: store-ca-cert
     importFromNamespace: ""
   authSecret:
+    name: store-auth-token
     importFromNamespace: ""
