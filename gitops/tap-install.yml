@@ -19,8 +19,6 @@ spec:
       paths:
       - config
       - config-build
-      - scan_policies
-      - tekton_pipelines
       valuesFrom:
       - configMapRef:
           name: tap-install-gitops
