@@ -7,7 +7,7 @@ profile: build
 ceip_policy_disclosed: true
 shared:
   ingress_domain: #@ data.values.tap.domains.main
-  kubernetes_version: "1.25.5"
+  kubernetes_version: "1.24.9"
   image_registry:
     project_path: #@ "{}/{}".format(data.values.tap.registry.host, data.values.tap.registry.repositories.repoName)
     username: #@ data.values.tap.credentials.registry.username
